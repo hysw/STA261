@@ -1,0 +1,77 @@
+\subsection{Monday, June 29, 2015}
+
+
+
+\subsubsection{Convergence}
+\paragraph{convergence in distribution}
+Let $X_1, X_2, \ldots$ be a infinite sequence of random variables
+and let $Y$ be another random variable.
+$X_n\xrightarrow{d} Y$ (the the sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{in distribution}) if
+\[\forall x\in\bR \left[\lim_{n\to\infty} \Pr(X_n\leq x) = \Pr(Y\leq x)\right]\]
+
+note that $\Pr(X_n\leq x) = F_{X_n}(x)$ and $\Pr(Y\leq x) = F_Y(x)$
+
+\paragraph{convergence in probobility}
+Let $X_1, X_2, \ldots$ be a infinite sequence of random variables
+and let $Y$ be another random variable.
+$X_n\xrightarrow{p} Y$ (the the sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{in probobility}) if
+\[\forall \eps > 0 \left[\lim_{n\to\infty} \Pr(|X_n-Y|>\eps) = 0\right]\]
+
+\paragraph{almost surely convergence}
+Let $X_1, X_2, \ldots$ be a infinite sequence of random variables with common $\mu<\infty$
+and let $Y$ be another random variable.
+$X_n\xrightarrow{a.s.} Y$ (the the sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{almost surely}) if
+\[\Pr\left(\lim_{n\to\infty} X_n = Y\right) = 1\]
+
+\paragraph{Weak Law of Large Number (WLLN)}
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent random variables
+and each being $\mu<\infty$, $\delta<\infty$.
+Then $\overline{X}_n\xrightarrow{p}\mu$.
+
+\paragraph{Strong Law of Large Number (SLLN)}
+Let $X_1, X_2, \ldots, X_n$ be a infinite sequence of independent random variables with finite sequence mean($\mu<\infty$).
+Then $\overline{X}_n\xrightarrow{a.s.}\mu$.
+
+
+
+\subsubsection{Central Limit Theorem}
+Let $X_1, X_2, \ldots, X_n$ be iid rv with finite mean and variance.
+Let $Z_n=\frac{\overline{X}-\mu}{\sigma\sqrt{n}}$,
+then as $n \to \infty$, $Z_n\xrightarrow{d} Y$ where $Y \sim \mathcal{N}(0,1)$
+
+\subsubsection{Normal Distribution Theorem}
+
+
+\color{gray}
+
+
+
+% DISCARD
+
+Types of Convergences, WLLN and CLT
+
+\begin{description}
+\item[Convergence in distribution]\hfill\\
+	$\forall x\in \bR \left[\lim_{n\to\infty}F_n(x)=F(x)\right]$
+\item[Convergence in probability]\hfill\\
+	$\lim_{n\to\infty}\Pr(|X_n-X|\geq\varepsilon)=0$
+\item[Almost sure convergence]\hfill\\
+	$\Pr(\lim_{n\to\infty}X_n = X)=1$
+\item[Weak law of large number (WLLN)]\hfill\\
+	$\overline{X}_n\xrightarrow{p} \mu$ when $n\to \infty$
+\end{description}
+
+
+\href{https://en.wikipedia.org/wiki/Convergence_of_random_variables}{Convergence on Wikipedia}
+
+\subsubsection{Central Limit Theorem (CLT)}
+
+Let $Y_1, \ldots, Y_n$ be independent and identically distributed random variables with $\E(Y_i)=\mu$ and $\Var(Y_i)=\sigma^2<\infty$.
+
+Define $U_n = \frac{\overline{Y}-\mu}{\sigma/\sqrt{n}}$.
+
+Then the distribution function of $U_n$ converges to the standard normal distribution function as $n\to \infty$.
+
+
+
+\color{black}
