@@ -1,0 +1,78 @@
+\onecolumn
+\section{Basic Distributions}
+
+\todo{order statistics}
+
+\begin{tabular}{ | l || c | c | c | c | c | } \hline
+Distribution      & repr
+                  & PDF,PMF
+                  & $E(X)$
+                  & $V(X)$
+                  & $M(t)$ \\\hline
+Negative Binomial &
+                  &
+                  &
+                  &
+                  & \\\hline
+Hypergeometric    &
+                  &
+                  &
+                  &
+                  & \\\hline
+Poisson           &
+                  &
+                  &
+                  &
+                  & \\\hline
+Normal            & $\mathcal{N}(\mu,\sigma^2)$
+                  & $\displaystyle \frac{\exp(-\frac{(x-\mu)^2}{2\sigma^2})}{\sigma\sqrt{2\pi}}$
+                  &
+                  &
+                  & \\\hline
+Gamma             & $\mathrm{Gamma}(\alpha, \lambda)$
+                  & $\displaystyle \frac{\lambda^\alpha}{\Gamma{\alpha}}x^{\alpha-1}e^-{\lambda x}$
+                  &
+                  &
+                  & \\\hline
+Beta              & $\mathrm{Beta}(\alpha, \beta)$
+                  & $\displaystyle \frac{x^{\alpha-1}(x-1)^{\beta-1}}{B(\alpha, \beta)}$
+                  &
+                  &
+                  & \\\hline
+Bernoulli         &
+                  & $[1-p, p]_k$
+                  & $p$
+                  & $p(1-p)$
+                  & \\\hline
+t                 &
+                  &
+                  &
+                  &
+                  & \\\hline
+Uniform           & $U(a, b)$
+                  & $\displaystyle \frac{1}{b-a}I_{(a, b)}(x)$
+                  &
+                  &
+                  & \\\hline
+Exponential       & $\mathrm{Exp}(\lambda)$
+                  & $\displaystyle \lambda e^{-\lambda x}$
+                  &
+                  &
+                  & \\\hline
+Binomial          & $\mathrm{Binom}(n, p)$
+                  & $\displaystyle \binom{n}{k}p^k(1-p)^{n-k}$
+                  & $np$
+                  & $np(1-p)$
+                  & \\\hline
+Geometric         &
+                  & $p(1-p)^{k-1}$
+                  & $\displaystyle \frac{1}{p}$
+                  & $\frac{1-p}{p^2}$
+                  & \\\hline
+
+\end{tabular}
+
+Where the beta function is defined by
+$\displaystyle B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$
+
+\twocolumn

@@ -1,15 +1,42 @@
 \subsection{Monday, July 6, 2015}
 
-A \kw{statistic} $t(X)$ is a function of data $X$ or sample and \hl{not} the parameter.
+\begin{itemize}
+\item statistic
+\item \todo{proboblity model and statistical model}
+\item \todo{statistical inference}
+\item \todo{estimator}
+\item \todo{principal of minimizaing MSE}
+\item \todo{Method of moment estimator}
+\item \todo{parameter space}
+\item \todo{biased estimator / unbiased estimator}
+\item \todo{consistant estimator}
+\item \todo{MVUE - Minimum-variance unbiased estimator}
+\end{itemize}
 
-\subsubsection{Statistical Model}
-A \kw{statistical model} is a set of assertions that directly or indirectly specify the proboblity distribution of observed data.
+\hrulefill
 
 % TODO
 
 \subsubsection{Estimator}
 
+An \textit{estimator} $\hat{\theta}$ is a rule, often expressed as a formula, that tells how to calculate the value of an estimate based on the measurements contained in a sample.
 
+The \textit{bias} of a point estimator $\hat{\theta}$ is given by $B(\hat{\theta}) = E(\hat{\theta})-\theta$.
+
+A estimator $\hat{\theta}$ is unbiased if $B(\hat{\theta}) = 0$.
+
+A estimator $\hat{\theta}$ is consistant if $\hat{\theta} \xrightarrow{p} \theta$.
+
+A square loose function is defined by $\mathcal{L}(\hat{\theta}, \theta)=(\hat{\theta}-\theta)^2$
+
+The risk function (expected lost) is defined by $R(\hat{\theta}, \theta)=E[(\hat{\theta}-\theta)^2]=\MSE$
+
+\paragraph{Principal of minimizing MSE}
+$\hat\theta_1$ is prefered $\hat\theta_2$, if $\MSE(\hat\theta_1)\leq\MSE(\hat\theta_2)$.
+$\hat\theta$ is optimal if $\MSE(\hat\theta)\leq\MSE(\hat\theta')$ for all $\hat\theta'$. \todo{check this}
+
+
+$\MSE(\hat\theta)=\Var(\hat\theta)+(B(\hat\theta))^2$
 
 \subsubsection{Statistical Inference}
 estimation($\hat \theta$, a estimator of $\theta$)
@@ -20,26 +47,14 @@ hypothesis testing estimation($\hat \theta$)
 estimator is a statistic $\hat \theta(X_1,\ldots,X_n)$
 estimator $\hat \theta$ is a statistic of data sample $(X_1,\ldots,X_n)$
 
-\begin{itemize}
-\item Proboblity model
-\item statistic model
-\item statistic Inference
-\item principal of minimizaing MSE
-\item Method of moment estimator
-\item parameter space
-\item biased estimator / unbiased estimator
-\item consistant estimator
-\item MVUE - Minimum-variance unbiased estimator
-\end{itemize}
-
-
 % DISCARD
 
-An \textit{estimator} is a rule, often expressed as a formula, that tells how to calculate the value of an estimate based on the measurements contained in a sample.
+
+the set of all unbiased estimator $D_0$
+
 
 Let $\hat{\theta}$ be a point estimator for a parameter $\theta$. Then $\hat{\theta}$ is an \textit{unbiased estimator} if $\E(\hat{\theta}) = \theta$. If $E(\hat{\theta}) \neq \hat{\theta}$, $\hat{\theta}$ is said to be \textit{biased}.
 
-The \textit{bias} of a point estimator $\hat{\theta}$ is given by $B(\hat{\theta}) = E(\hat{\theta})-\theta$.
 
 The \textit{mean square error} of a point estimator $\hat{\theta}$ is
 \[\MSE(\hat{\theta})=\E[(\hat{\theta}-\theta)^2]=\Var(\hat{\theta})+ [\B(\hat{\theta})]^2\]

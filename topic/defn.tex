@@ -1,0 +1,79 @@
+\section{Definitions and Theorems}
+\subsection{Random Variable}
+
+The \kw{sample space} $\Omega$ is the set of all possible outcome.
+\kw{Events} are the subset of $\Omega$ (denoted: $A, B, \ldots$).
+A \kw{random variable} $X:\Omega\to E$ is a measurable function
+from the set of possible outcomes $\Omega$ to some set $E$(usually $E=\bR$).
+
+\todo{expected value}
+
+\todo{variance}
+
+\todo{standard deviation}
+
+\todo{covariance}
+
+\todo{correlation}
+
+\todo{mgf - moment generating function}
+
+
+\todo{the other basics}
+
+Conditional probability:
+\[\Pr(A|B)=\frac{\Pr(A\cap B)}{\Pr(B)}\]
+
+Two events $A$ and $B$ are independent if $P(A\cap B)=\Pr(A)\Pr(B)$.
+
+Bayes' Rule
+\[\Pr(A|B)=\frac{\Pr(B|A)\Pr(A)}{\Pr(B)}\]
+
+\todo{PMF}
+\todo{PDF}
+\todo{CDF}
+
+\subsection{Convergence of random variables}
+	Let $X_1, X_2, \ldots$ be a sequence of random variables.
+	Let $Y$ be another random variable.
+
+	The sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{in distribution} if
+	\[\forall x\in\bR \left[\lim_{n\to\infty} \Pr(X_n\leq x) = \Pr(Y\leq x)\right]\]
+
+	Note that $\Pr(X_n\leq x) = F_{X_n}(x)$ and $\Pr(Y\leq x) = F_Y(x)$.
+
+	The sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{in probobility} if
+	\[\forall \eps > 0 \left[\lim_{n\to\infty} \Pr(|X_n-Y|>\eps) = 0\right]\]
+
+	Suppose all random variable have a (finite) common mean.
+
+	The sequence $\{X_n\}$ \kw{converges} to $Y$ \kw{almost surely} if
+	\[\Pr\left(\lim_{n\to\infty} X_n = Y\right) = 1\]
+
+\subsection{Law of large numbers (LLN)}
+	Let $X_1, X_2, \ldots$ be a sequence of iid random variables with finite mean.
+
+	The \kw{Weak law of large numbers (WLLN)} states that
+		\[\overline{X}_n\xrightarrow{p}\mu~\textrm{as}~n\to\infty\]
+
+	The \kw{Strong law of large numbers (SLLN)} states that
+		\[\overline{X}_n\xrightarrow{a.s.}\mu~\textrm{as}~n\to\infty\]
+
+\subsection{Central limit theorem (CLT)}
+	Let $X_1, X_2, \ldots$ be a sequence of iid random variables with finite mean and variance.
+
+	Let $Z_n=\frac{\overline{X}-\mu}{\sigma\sqrt{n}}$,
+	then as $n \to \infty$, $Z_n\xrightarrow{d} Y$ where $Y \sim \mathcal{N}(0,1)$
+
+\subsection{Statistic}
+	A \kw{statistic} $t(X)$ is a function of data $X$ or sample.
+
+	Let $X_1, \ldots, X_n \sim F_\theta$ and let $T$ be a function of $\mathbf{X}=\{X_1, \ldots, X_n\}$.
+	We call $T=T(\mathbf{X})$ a \kw{sufficient statistic} for $\theta$ if it is a statistic and the conditional probability $\Pr(\mathbf{X}|T)$ does not depend on $\theta$.
+
+	An \kw{ancillary statistic} is a \hyperref[concept:pivot]{pivot} (which is also a statistic).
+
+	Note that a statistic is \hl{NOT} the parameter.
+
+\subsection{Statistical model}
+	A \kw{statistical model} is a set of assertions that directly or indirectly specify the proboblity distribution of observed data.

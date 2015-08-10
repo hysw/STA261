@@ -1,0 +1,128 @@
+\section{Statistical Inference}
+\todo{Bayesian or frequentist approach}
+
+$\hat\theta$ is a random variable with probability distribution
+	known as the \kw{sampling distribution}.
+The standard deviation of the sampling distribution
+	is known as the \kw{standard error}.
+
+\subsection{Pivotal quantity}\label{concept:pivot}
+	A \kw{pivotal quantity} or \kw{pivot} is a function of observations and unobservable parameters whose probability distribution does not depend on the unknown parameters.
+
+\subsection{Method of moments}
+The $k^\mathrm{th}$ moment is defined as
+\[M^{(k)}(0)=\mu_k=\E(X^k)\]
+if $X_1, X_2, \ldots, X_n$ are i.i.d. random variables from a distribution,
+the $k^\mathrm{th}$ \kw{sample moment} is defined as
+\[\hat\mu_k=\frac{1}{n}\sum_{i=0}^n X_i^k\]
+$\hat\mu_k$ can be viewed as a \kw{unbiased} estimate of $\mu_k$.
+
+\todo{application}
+
+\todo{MME - Method of moment esitimator}
+
+\subsection{Maximum likelihood estimate}
+
+\todo{definition}
+
+The log likelihood function is defined by $l(|\theta)=\ln L(|\theta)$.
+
+\subsection{Properties}
+
+An estimator $\hat\theta$ is \kw{consistent} if $\hat{\theta}_n \xrightarrow{p} \theta$
+as $n\to\infty$.
+
+An estimator $\hat\theta$ is \kw{umbiased} if $\E(\hat\theta)=\theta$.
+
+The \kw{mean square error}(MSE) of an estimator $\hat{\theta}$ is
+\[\MSE(\hat{\theta})=\E[(\hat{\theta}-\theta)^2]=\Var(\hat{\theta})+ [\B(\hat{\theta})]^2\]
+
+The \kw{efficiency} of $\hat{\theta}$ relative to $\tilde{\theta}$ is the ration of their variances.
+\[\mathrm{eff}(\hat{\theta}, \tilde{\theta}) = \frac{\Var(\tilde{\theta})}{\Var(\hat{\theta})}\]
+
+\todo{Sufficiency}
+
+\todo{MLE - Maximum likelihood esitimator}
+
+\todo{Theorem 9.2 from p451 MSA}
+
+\todo{p310 of PSTSCU}
+
+\subsection{Exponential family}
+
+\todo{Exponential family model and its properties}
+
+A model in exponential family can be expressed as
+\[f(x|\theta) = \mathrm{exp}(\pi(\theta)T(x)-g(\theta)+b(x))\]
+where $\pi$ is called \kw{natural parameters}, and $T$ is called
+\kw{natural sufficient statistics}.
+
+Examples of exponential family models:
+	normal, bernoulli, $\chi^2$, exponential, Poisson,
+	gamma, binomial, negative binomial, beta, inverse normal, ...
+
+Fact: $\hat\theta_\mathrm{MLE}$ is a function of sufficient
+statistic for exponential family.
+
+Fact: If $X$ is destributed according to a full rank exponential
+family, then $T(x)$ is minimal sufficient.
+
+\todo{fact about $T$ and complete}
+
+Examples of 1-param exponential family models:
+	bernoulli, binomial, possion, exponential.
+
+For 1-param exponential family, method of moment estimator
+is equal to maximum likelihood estimator.
+
+\subsection{Score and Fisher information}
+
+The \kw{score function} $S(\theta)$ is defined by:
+\[S(\theta) = S(x|\theta) = \frac{\partial l(x|\theta)}{\partial \theta}\]
+
+Fact: $\E[S(\theta)]=0$
+
+The \kw{Fisher information} $I(\theta)$ is defined by: \[I(\theta)=\E\left[-\frac{\partial^2 l(x|\theta)}{\partial^2 \theta}\right]\]
+
+
+Fact: $\Var(S(\theta))=I(\theta)$
+
+Fact: $\Var(\sum_1^n S(\theta))=nI(\theta)$
+\subsection{wtf}
+$\sum_{i=1}^n T(X_i)$ is sufficient statistic.
+
+including normal, the binomial, the Poisson, and the gamma.
+
+
+\todo{Score function and fisher information}
+
+
+
+Under i.i.d. sampling from a model with Fisher information $I(\theta)$
+the Fisher information for a sample of size n is given by $nI(\theta)$
+
+\todo{Theorem 6.5.1 of PSTSCU}
+
+The observed Fisher information is given by
+\[\hat I(s|\theta) = \frac{\partial^2 l(s|\theta)}{\partial^2 \theta}\Big|_\theta=\hat\theta(s)\]
+where $\hat\theta(s)$ is MLE.
+
+
+
+
+\todo{sufficient at p460}
+
+\todo{factorization criterion at p461}
+
+\todo{Ex 9.66}
+
+\todo{9.4, 9.5 and 9.7}
+
+\todo{Maximum Likelihood Estimator}
+
+\todo{Rao-Blackwell Theorem}
+
+\todo{Complete Statistic}
+
+
+\todo{Lehmann-Scheffe Lemma}

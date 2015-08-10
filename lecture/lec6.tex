@@ -1,3 +1,70 @@
 \subsection{Wednesday, July 22, 2015}
-Likelihood Asymptotic and Delta Method
-Cramer-Rao lower bound
+
+
+\todo{Observed fisher information}
+
+\todo{Expected fisher information}
+
+\todo{likelihood inverse}
+
+\subsubsection{Likelihood Asymptotic}
+
+Asymptotic properties of MLE
+
+Let
+\[S(\theta)=\sum_i^n S_i(\theta)\]
+\begin{enumerate}
+\item $\frac{1}{\sqrt{n}}S(\theta) \xrightarrow{d} N(0, I(\theta))$
+\item $\sqrt{n}(\theta_{MLE}-\theta)\to N(0,I(\theta)^{-1})$
+\item $\hat \theta_{MLE} \xrightarrow{p} \theta_{MLE}$
+\end{enumerate}
+
+
+\subsubsection{Delta method}
+If $\sqrt{n}(\hat\theta-\theta)\xrightarrow{d}\mathcal{N}(0, [I(\theta)]^{-1})$
+then $g$ us a differentiable function and $g'(\theta)\neq 0$
+then 
+\[\sqrt{n}(g(\hat\theta)-g(\theta))\xrightarrow{d}\mathcal{N}(0, [g'(\theta)]^2[I(\theta)]^{-1})\].
+
+For $g'(\theta)=0$ and $g''(\theta)\neq 0$,
+\[n(g(\hat\theta)-g(\theta)) \sim \mathcal{X}^2_{1}\frac{1}{2}g''(\theta)\frac{1}{I(\theta)}\]
+
+\todo{\href{https://en.wikipedia.org/wiki/Delta_method}{proof}}
+\todo{Final Question}
+
+
+
+\subsubsection{Cramer-Rao lower bound}
+
+Suppose $\theta$ is unknown parameter which is to be estimated from $X=(X_1,\ldots,X_n)$
+distributed according to $f_e(X)$ then for any given unbiased estimator $\hat\theta$
+$\Var(\hat\theta)\geq [nI(\theta)]^{-1}$.
+
+If $\hat\theta_{MLE}$ is unbiased and $\hat\theta_{MLE}$ achieves CR lower bound
+then $\hat\theta_{MLE}$ is MVUE.
+
+
+\fixme{retype} in exponential family $\hat\theta_{MLE}$ is a fn of  complete mss then by
+lena-sheffe lemma $\hat\theta_{MLE}$ is MVUE
+
+but not all MLEs are unbiased
+therefore MVUE does not always achieve Cramer-Rao lower bound.
+
+
+
+
+Bernulli $\theta$ $\hat\theta_{MLE}=\bar X$ $\Var(\bar x)=[nI(\theta)]^{-1}$
+
+Bionomial $(n, \theta)$ $\hat\theta_{MLE}=\bar X$
+
+Poisson $\hat\theta_{MLE}=\bar X$
+
+$\exp(\beta)$ $\hat\theta_{MLE}=\bar X$
+
+Normal - \todo{check}
+
+Uniform - \todo{check non-exist}
+
+Gamma - \todo{check}
+
+Beta - \todo{check}

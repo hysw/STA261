@@ -1,3 +1,5 @@
+CLEAN_EXT={aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg,backup}
+
 all: STA261.pdf clean_useless
 
 pdf: STA261.pdf
@@ -9,7 +11,7 @@ STA261.pdf: *.tex
 	pdflatex STA261.tex
 
 clean_useless:
-	rm -f *.{aux,toc,out,idx,log,backup,gls,glo,glsdefs,xdy,ilg,ind,ist,acn,glg} *~
+	rm -f *.${CLEAN_EXT} */*.${CLEAN_EXT} *~
 
 clean: clean_useless
 	rm -f *.pdf

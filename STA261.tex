@@ -30,6 +30,11 @@
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\hl}[1]{{\color{red}#1}}
+\newcommand{\wraped}[1]{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule-1em}{#1}}
+\newcommand{\todo}[1]{\fcolorbox{red!20!white}{black!5!white}{\color{red!40!black!40!white}\{ #1 \}}}
+\newcommand{\fixme}[1]{\fcolorbox{orange!40!white}{black!5!white}{\color{orange!70!black!40!white}\{ #1 \}}}
+\newcommand{\todowraped}[1]{\fcolorbox{red!20!white}{black!5!white}{\wraped{\color{red!40!black!40!white}\{ #1 \}}}}
+% \newcommand{\todo}[1]{\colorbox{red!70!black!5!white}{\color{red!70!black!50!white}\{ #1 \}}}
 \let\kw\textbf
 
 \title{UofT-STA261-2015-Summer Note}
@@ -51,11 +56,16 @@
 
 \tableofcontents
 
+\include{topic/dist}
+\include{topic/defn}
+\include{topic/infer}
+
+
+\include{lecture}
 
 \include{topic/todo}
 \include{topic/abbr}
 \include{topic/basic}
-\include{lecture}
 % \include{basic}
 % \include{linear_algebra}
 % \include{topology}
@@ -68,4 +78,6 @@
 % \include{copyright}
 %\printglossaries
 %\printindex
+\section{Acknowledgement}
+Thanks to \textit{Summer Bian} on Facebook for lecture notes.
 \end{document}
